@@ -30,14 +30,16 @@ const Navbar = () => {
                   {user ? null : (
                     <Link
                       href="/sign-in"
-                      className={buttonVariants({ variant: 'ghost' })}
+                      className={buttonVariants({
+                        variant: 'ghost',
+                      })}
                     >
                       Sign in
                     </Link>
                   )}
 
                   {user ? null : (
-                    <span className="h-6 w-px bg-grey-200" aria-hidden="true" />
+                    <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   )}
 
                   {user ? (
@@ -52,18 +54,15 @@ const Navbar = () => {
                   )}
                   {/*mostra a opção de logout para pessoas ja conectadas */}
                   {user ? (
-                    <span
-                      className="h-6 w-px bg-grey-200"
-                      aria-hidden="true"
-                    ></span>
+                    <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   ) : null}
 
                   {user ? null : (
-                    <div className="flex lg:ml-6 ">
+                    <div className="flex lg:ml-6">
                       <span
-                        className="h-6 w-px bg-grey-200"
+                        className="h-6 w-px bg-gray-200"
                         aria-hidden="true"
-                      ></span>
+                      />
                     </div>
                   )}
                 </div>
